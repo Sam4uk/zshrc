@@ -382,3 +382,11 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+dssh() {
+    ssh-keygen  -f  "$HOME/.ssh/known_hosts" -R $1
+}
+
+mkcd(){
+    mkdir $1 && cd $1
+}
